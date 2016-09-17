@@ -1,0 +1,85 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+       
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="hue_demo.MainWindow"
+       
+        Title="MainWindow" Height="350" Width="525" WindowState="Maximized" WindowStyle="None">
+    <Grid x:Name="back" Background="#FF211D1D" >
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="19*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="17.627"/>
+            <RowDefinition Height="0.373"/>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="38*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="21*"/>
+            <RowDefinition Height="19*"/>
+            <RowDefinition Height="22*"/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="22*"/>
+            <RowDefinition Height="30*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="31*"/>
+            <ColumnDefinition Width="37*"/>
+            <ColumnDefinition Width="342*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="61*"/>
+            <ColumnDefinition Width="16*"/>
+        </Grid.ColumnDefinitions>
+        <Border x:Name="blur" Grid.RowSpan="17" BorderThickness="10" Grid.ColumnSpan="6" Margin="-10,0,-10.119,-9.667">
+            <Image x:Name="blurimage"  Stretch="UniformToFill" Margin="-10,-42,-10,-10"  VerticalAlignment="Top" Opacity="0.25"  />
+        </Border>
+
+
+
+        <Border x:Name="imgborder" Grid.RowSpan="14" BorderThickness="10" Grid.Row="2" Grid.ColumnSpan="6" Margin="18,15.667,14.881,4.333" HorizontalAlignment="Center" VerticalAlignment="Center" d:IsHidden="True">
+            <Image x:Name="photo"  Stretch="UniformToFill" Margin="0" Width="1240" Height="720"  />
+            <!--Source="background.jpg"-->
+        </Border>
+
+        <Button  Grid.Column="5" Visibility="Collapsed" Grid.Row="10"  Click="Button_Click" RenderTransformOrigin="0.553,-0.051" VerticalAlignment="Bottom" Height="39" d:IsHidden="True"    >
+            <Button.Foreground>
+                <SolidColorBrush Color="Black" Opacity="0.1"/>
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush Color="#FF707070" Opacity="0"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <ImageBrush ImageSource="paly.png"/>
+            </Button.Background>
+        </Button>
+        <!--<Border Grid.RowSpan="5" Grid.Column="4" Grid.Row="10" Margin="0,0,1,0">
+            <Image Source="paly.png" x:Name="play"  Stretch="Fill" Grid.Column="4" Margin="0,28,0,0" Grid.Row="10" Grid.RowSpan="5" />
+        </Border>-->
+
+        <Button x:Name="choose" Grid.Column="5" Grid.RowSpan="2" Visibility="Collapsed" Click="choose_Click" Grid.Row="8" RenderTransformOrigin="4.548,0.558" d:IsHidden="True" >
+            <Button.Foreground>
+                <SolidColorBrush Color="Black" Opacity="0"/>
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush Color="#FF707070" Opacity="0"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <ImageBrush ImageSource="folder.png"/>
+            </Button.Background>
+        </Button>
+        <!--<Border Grid.RowSpan="5" Grid.Column="4" Grid.Row="4" Margin="0,3,1,0">
+            <Image Source="folder.png" x:Name="folder"  Stretch="Fill"  VerticalAlignment="Top" Grid.Column="4" Grid.Row="4" Grid.RowSpan="5" Height="88"  />
+        </Border>-->
+        <!--Button x:Name="register" Content="register" HorizontalAlignment="Left" Width="91" Grid.Column="3" Foreground="White" Background="Black" BorderBrush="White" Height="18" VerticalAlignment="Top" Click="register_Click"/-->
+        <!--Button  x:Name="gethue" Content="get hue" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Grid.Column="3" Margin="1,0,0,0" Grid.Row="2" Height="19" Background="Black" Foreground="White" BorderBrush="White" Click="gethue_Click"/-->
+
+        <!--TextBox x:Name="ip" HorizontalAlignment="Left" Height="43" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="330" Grid.Column="1" Grid.RowSpan="3"/-->
+        <Label x:Name="output" Content="" Grid.Column="4" Grid.Row="4" Background="White" Margin="0,1,1,4" Grid.RowSpan="3" Visibility="Collapsed" d:IsHidden="True"/>
+        <MediaElement x:Name="PlayMusic" LoadedBehavior="Manual" UnloadedBehavior="Stop"  HorizontalAlignment="Left" Height="100" Margin="-74,0,0,0" Grid.Row="12" Grid.RowSpan="5" VerticalAlignment="Top" Width="100" d:IsHidden="True"/>
+
+    </Grid>
+</Window>
